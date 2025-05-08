@@ -1,0 +1,11 @@
+projeto_um_completo:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dbt-completo
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt_dw') }}"
+      threads: 4
+      keyfile: /home/gildogomes/.dbt/dbt-completo-4fc5d61233f4.json
+  
