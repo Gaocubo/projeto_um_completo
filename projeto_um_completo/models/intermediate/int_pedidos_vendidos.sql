@@ -43,6 +43,7 @@ with pedidos as (
 , joined as (
     select
         pedidos.data_pedido
+        , pedidos.id
         , cliente.nome
         , cliente.email
         , pagamentos.valor
